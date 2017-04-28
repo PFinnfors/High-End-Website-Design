@@ -1,4 +1,6 @@
-﻿@{
+﻿<reference path="~/Scripts/jquery.min.js"></reference>
+
+@{
     ViewBag.Title = "Home";
 }
 <div class="container" style="color:white">
@@ -9,40 +11,37 @@
     </div>
 
     <div class="row">
-        <div id="info1" class="col-sm-12 col-xs-12 col-md-6">
-            <h3>Click Here</h3>
-            <div>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    Suspendisse interdum porta lacinia. Suspendisse est mi, tincidunt quis ligula ac, blandit lacinia felis.
-                    Proin et nisl quis libero porttitor vestibulum in eleifend magna.
-                </p>
-            </div>
+        <div class="col-sm-12 col-xs-12 col-md-6">
+            <h3><a id="infoHead1">Click Here <span class="glyphicon glyphicon-chevron-down"></span></a></h3>
+            <p id="info1">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse interdum porta lacinia. Suspendisse est mi, tincidunt quis ligula ac, blandit lacinia felis.
+                Proin et nisl quis libero porttitor vestibulum in eleifend magna.
+            </p>
         </div>
 
-        <div id="info2" class="col-sm-12 col-xs-12 col-md-6">
-            <h3>Click Here Too</h3>
-            <div>
-                <p>
-                    In euismod nec purus vitae egestas. Cras ultrices, massa et tincidunt feugiat,
-                    ex sem ultrices libero, vel dignissim massa sapien at ex. Fusce tristique at felis ut elementum.
-                    Praesent dignissim, lectus quis dignissim pretium, odio mi molestie nunc, vel ornare dolor nunc vel ipsum.
-                    Suspendisse rhoncus vestibulum erat, at interdum dui laoreet a. Vestibulum ante ipsum primis in
-                    faucibus orci luctus et ultrices posuere cubilia Curae; Nulla malesuada nulla fringilla orci sagittis,
-                    et lobortis enim imperdiet.
-                </p>
-            </div>
+        <div class="col-sm-12 col-xs-12 col-md-6">
+            <h3><a id="infoHead2">And Here <span class="glyphicon glyphicon-chevron-down"></span></a></h3>
+            <p id="info2">
+                In euismod nec purus vitae egestas. Cras ultrices, massa et tincidunt feugiat,
+                ex sem ultrices libero, vel dignissim massa sapien at ex. Fusce tristique at felis ut elementum.
+                Praesent dignissim, lectus quis dignissim pretium, odio mi molestie nunc, vel ornare dolor nunc vel ipsum.
+                Suspendisse rhoncus vestibulum erat, at interdum dui laoreet a. Vestibulum ante ipsum primis in
+                faucibus orci luctus et ultrices posuere cubilia Curae; Nulla malesuada nulla fringilla orci sagittis,
+                et lobortis enim imperdiet.
+            </p>
         </div>
 
         <script>
-            $(function () {
-                $("#info1").accordion({
-                    collapsible: true
+            $(document).ready(function () {
+                $("#info1").toggle();
+                $("#info2").toggle();
+
+                $("#infoHead1").click(function () {
+                    $("#info1").toggle(1000);
                 });
-            });
-            $(function () {
-                $("#info2").accordion({
-                    collapsible: true
+                $("#infoHead2").click(function () {
+                    $("#info2").toggle(1000);
                 });
             });
         </script>
@@ -50,7 +49,7 @@
 
     </div>
     <div>
-        @Html.Partial("Intro")
+        @Html.Partial("_Home")
     </div>
 
 </div>

@@ -23,6 +23,12 @@ textarea {
     max-width: 280px;
 }
 
-/* VIDEO BACKGROUND */
-
-/* VIDEO BACKGROUND END */
+/* CUSTOM NAVBAR */
+.custNav {
+    background: none;
+    border: none;
+}
+.custNavText {
+    color: white;
+    font-weight: bold;
+}
