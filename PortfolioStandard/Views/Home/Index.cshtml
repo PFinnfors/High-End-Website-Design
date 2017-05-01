@@ -6,14 +6,18 @@
 <div class="container" style="color:white">
 
     <div class="row text-center jumbotron" style="background:none">
-        <h1>Human Cortex</h1>
+        <h1 class="customFont">Human Cortex</h1>
+        <div id="eyeIcon">
+            <h1 class="glyphicon glyphicon-eye-open"></h1>
+        </div>
         <h3><span>Evolved to predict the future</span></h3>
+        
     </div>
 
     <div class="row">
         <div class="col-sm-12 col-xs-12 col-md-6">
-            <h3><a id="infoHead1">Click Here <span class="glyphicon glyphicon-chevron-down"></span></a></h3>
-            <p id="info1">
+            <h3><a id="infoHead1">Click Here <span class="infoTrig glyphicon glyphicon-chevron-down"></span></a></h3>
+            <p id="info1" class="subtleBackg">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                 Suspendisse interdum porta lacinia. Suspendisse est mi, tincidunt quis ligula ac, blandit lacinia felis.
                 Proin et nisl quis libero porttitor vestibulum in eleifend magna.
@@ -21,8 +25,8 @@
         </div>
 
         <div class="col-sm-12 col-xs-12 col-md-6">
-            <h3><a id="infoHead2">And Here <span class="glyphicon glyphicon-chevron-down"></span></a></h3>
-            <p id="info2">
+            <h3><a id="infoHead2">And Here <span class="infoTrig glyphicon glyphicon-chevron-down"></span></a></h3>
+            <p id="info2" class="subtleBackg">
                 In euismod nec purus vitae egestas. Cras ultrices, massa et tincidunt feugiat,
                 ex sem ultrices libero, vel dignissim massa sapien at ex. Fusce tristique at felis ut elementum.
                 Praesent dignissim, lectus quis dignissim pretium, odio mi molestie nunc, vel ornare dolor nunc vel ipsum.
@@ -32,22 +36,10 @@
             </p>
         </div>
 
-        <script>
-            $(document).ready(function () {
-                $("#info1").toggle();
-                $("#info2").toggle();
-
-                $("#infoHead1").click(function () {
-                    $("#info1").toggle(1000);
-                });
-                $("#infoHead2").click(function () {
-                    $("#info2").toggle(1000);
-                });
-            });
-        </script>
         <noscript>JQuery not working!</noscript>
 
     </div>
+
     <div>
         @Html.Partial("_Home")
     </div>

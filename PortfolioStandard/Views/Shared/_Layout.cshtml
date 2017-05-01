@@ -5,13 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - Human Cortex</title>
     @Styles.Render("~/Content/css")
+    <link href="https://fonts.googleapis.com/css?family=Rationale" rel="stylesheet"> 
     @Scripts.Render("~/bundles/modernizr")
     <script src="~/Scripts/jquery.min.js"></script>
 </head>
 <body>
-    <div class="custNav navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inverse navbar-fixed-top custNav navbar">
         <div class="container">
-            <div class="navbar-header">
+            <div class="navbar-header customFont">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -20,7 +21,7 @@
                 @Html.ActionLink("Human Cortex", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
-                <ul class="custNavText nav navbar-nav">
+                <ul class="nav navbar-nav custNavText">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
                     <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
@@ -30,8 +31,10 @@
     </div>
     <div class="container body-content">
         @RenderBody()
-        <footer class="navbar-fixed-bottom" style="background-color:black; color:white">
-            <p>&copy; @DateTime.Now.Year - Human Cortex <span class="glyphicon glyphicon-eye-open"></span></p>
+        <footer class="navbar-fixed-bottom text-center" style="background-color:black; color:white">
+            <h5>@DateTime.Now.Year &copy; Pier S. Finnfors <a class="gitLink" target="_blank" href="http://www.github.com/PFinnfors/">
+                [GitHub] <span class="glyphicon glyphicon-new-window"></span></a>
+            </h5>
         </footer>
     </div>
 
